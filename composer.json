@@ -1,0 +1,36 @@
+{
+  "name": "jmjl161100/laravel-chunk-upload",
+  "description": "Laravel chunk upload support package.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Jmjl161100\\ChunkUpload\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "jmjl161100"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "^11.0",
+    "overtrue/laravel-filesystem-qiniu": "^2.3"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Jmjl161100\\ChunkUpload\\ChunkUploadServiceProvider"
+      ],
+      "aliases": {
+        "CheckUpload": "Jmjl161100\\ChunkUpload\\Facades\\CheckUpload"
+      }
+    }
+  },
+  "require-dev": {
+    "laravel/pint": "^1.22"
+  }
+}
